@@ -1,4 +1,4 @@
-#!/home/momi/Desktop/flet/venv/bin/python3
+#!/home/momi/Desktop/month3/venv/bin/python3
 
 # http://www.python.org/doc/2.4.4/lib/module-itertools.html
 import itertools
