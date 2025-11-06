@@ -1,4 +1,4 @@
 .bin
-venv 
 .venv
+venv
 __pycashe__/
