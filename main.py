@@ -75,3 +75,5 @@ def main_page(page: ft.Page):
     page.add(greeting_text, name_input, input_button_text,theme_mode_button, clear_button, history_text,add_favorites_button, favorit_text)
 
 ft.app(target=main_page)
+
+#soryyy byli problems imenno s github 🫠🫠
