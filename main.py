@@ -27,9 +27,8 @@ def main_page(page: ft.Page):
 
             greeting_history.append(f"{timestamp} {name}")
             history_text.value = 'History of greetings: \n' + '\n'.join(greeting_history)
-            if len(greeting_history) >4:
-                greeting_history.pop(-5)
-            else: None
+        
+        
             
 
         else:
@@ -38,6 +37,18 @@ def main_page(page: ft.Page):
 
 
         page.update()
+
+    def clear_last_history(_):
+        if greeting_history:
+            greeting_history.pop()
+            history_text.value = 'History of greetings: \n' + '\n'.join(greeting_history)
+        else:
+            history_text.value = "The list is empty, nothing to pop."
+        page.update()
+
+
+    clear_last_button = ft.ElevatedButton(text='Clear Last', icon=ft.Icons.REMOVE, on_click=clear_last_history)
+    page.add(clear_last_button)
 
 
     def add_favorites(_):
@@ -75,5 +86,3 @@ def main_page(page: ft.Page):
     page.add(greeting_text, name_input, input_button_text,theme_mode_button, clear_button, history_text,add_favorites_button, favorit_text)
 
 ft.app(target=main_page)
-
-#soryyy byli problems imenno s github 🫠🫠
